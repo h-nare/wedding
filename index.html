@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mane & Robert - Our Wedding Celebration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Vrdznagir"', 'cursive', 'serif'], // Headers use Vrdznagir (Armenian)
+                        body: ['"Armenian Decorative"', 'cursive', 'sans-serif'], // Body text uses Armenian Decorative (Armenian)
+                        englishbody: ['"Dancing Script"', 'cursive', 'sans-serif'], // New: For English body text
+                        englishheading: ['"Playfair Display"', 'serif'], // New: Another option for English headings
+                    },
+                    colors: {
+                        primary: '#A77977', // Muted Rose
+                        secondary: '#D4C1EC', // Soft Lavender
+                        accent: '#F2D7D5', // Light Peach
+                        darktext: '#3A3B3C', // Dark Grey for text
+                        lightbg: '#FBFBFB', // Off-white background
+                        mediumbg: '#F5F5F5', // Slightly darker off-white
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body class="font-body text-darktext bg-lightbg overflow-x-hidden relative">
+    <div id="entry-overlay" class="fixed inset-0 bg-primary flex flex-col items-center justify-center text-white z-50 p-6 text-center">
+        <div class="absolute inset-0 z-0 background-image-placeholder">
+            </div>
+
+        <h1 class="text-6xl md:text-8xl font-englishbody font-bold mb-6 animate-fade-in-up mt-auto">Mane & Robert</h1>
+        <p class="text-xl md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չեք կարում հավատալ ? Մենք էլ...</p>
+        <button id="enter-button" class="bg-white text-primary px-12 py-5 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 font-semibold text-xl animate-fade-in-up delay-400 font-heading">
+            Դիտել հրավերը
+        </button>
+    </div>
+
+    <div class="main-content relative z-10">
+        <header class="bg-white bg-opacity-90 shadow-lg py-4 px-6 fixed w-full z-40 top-0 backdrop-blur-sm">
+            <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <a href="#home" class="text-3xl font-englishbody font-bold text-primary mb-2 md:mb-0">Mane & Robert</a>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-lg font-englishbody">
+                    <li><a href="#home" class="text-darktext hover:text-primary transition duration-300">Home</a></li>
+                    <li><a href="#important-dates" class="text-darktext hover:text-primary transition duration-300">Important Dates</a></li>
+                    <li><a href="#timeline-church" class="text-darktext hover:text-primary transition duration-300">Ceremony</a></li>
+                    <li><a href="#timeline-hall" class="text-darktext hover:text-primary transition duration-300">Reception</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="relative h-screen text-white overflow-hidden pt-24 md:pt-0">
+            <img id="slideshow-img" src="https://i.imgur.com/KqiDu94.jpeg" alt="Wedding Couple" class="slideshow-image absolute inset-0 w-full h-full object-cover filter brightness-75">
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xl text-center px-6 pb-6 z-10">
+                <p class="text-lg md:text-xl font-body font-light hero-overlay-text">
+Սիրով հրավիրում ենք ձեզ ներկա գտնվելու և մեզ հետ կիսելու մեր կյանքի կարևորագույն իրադարձությունը:
+                </p>
+            </div>
+        </section>
+
+        <section id="important-dates" class="py-16 px-6 bg-mediumbg relative z-10">
+            <div class="container mx-auto text-center max-w-4xl bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8 text-primary">Հարսանիքին մնացել է</h2>
+
+                <div class="flex justify-center items-center space-x-4 mb-10 text-darktext flex-wrap sm:flex-nowrap">
+                    <div class="text-center p-2">
+                        <span id="days" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
+                        <p class="text-lg font-englishbody">Days</p>
+                    </div>
+                    <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
+                    <div class="text-center p-2">
+                        <span id="hours" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
+                        <p class="text-lg font-englishbody">Hours</p>
+                    </div>
+                    <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
+                    <div class="text-center p-2">
+                        <span id="minutes" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
+                        <p class="text-lg font-englishbody">Minutes</p>
+                    </div>
+                    <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
+                    <div class="text-center p-2">
+                        <span id="seconds" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
+                        <p class="text-lg font-englishbody">Seconds</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-8 text-darktext">
+                    <div>
+                        <h3 class="text-2xl font-englishheading font-bold text-primary mb-2">Wedding Day:</h3>
+                        <p class="text-xl font-englishbody">October 11, 2025</p>
+                    </div>
+                </div>
+                <p class="text-xl font-semibold text-primary mt-8 font-englishbody">Your presence is our greatest gift(jokes aside our bridesmaid will be more than satisfied to have a birthday gift >_<)!</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="timeline" class="py-16 px-6 bg-lightbg relative z-10">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-4xl md:text-5xl font-englishbody font-bold text-center mb-12 text-primary">The Celebration</h2>
+                <div id="timeline-church" class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden mb-12 transform hover:scale-[1.01] transition duration-300">
+                    <div class="md:w-1/2 w-full h-80 md:h-auto overflow-hidden">
+                        <img src="https://i.imgur.com/KPWNK5V.jpeg" alt="Church Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="md:w-1/2 w-full p-8 text-center md:text-left">
+                        <h3 class="text-4xl font-heading font-bold mb-4 text-primary">Պսակադրություն</h3>
+                        <p class="text-2xl font-body font-semibold text-darktext mb-2"> Սուրբ Գայանե եկեղեցի <br> <span class="text-primary">14:00</span>
+                        </p>
+                        <p class="text-lg mb-6 text-darktext font-body"> Հասցե՝ Արմավիրի մարզ, ք.Էջմիածին
+                        </p>
+                        <a href="https://www.google.com/maps/place/%D5%8D%D5%B8%D6%82%D6%80%D5%A2+%D4%B3%D5%A1%D5%B5%D5%A1%D5%B6%D5%A5+%D5%A5%D5%AF%D5%A5%D5%B2%D5%A5%D6%81%D5%AB/@40.1578935,44.2862611,16.15z/data=!4m6!3m5!1s0x406a952aa68c6009:0x8a692ec2c8be215a!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.imgur.com/yGRNs9h.png"
+                                alt="Map of Surb Gayane Church"
+                                class="w-full h-64 rounded-lg shadow-md border border-accent object-cover cursor-pointer">
+                        </a>
+                        <p class="text-sm text-darktext mt-4 italic font-englishbody">Click on the map to open in Google Maps</p>
+                    </div>
+                </div>
+
+                <div id="timeline-hall" class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition duration-300">
+                    <div class="md:w-1/2 w-full h-80 md:h-auto overflow-hidden">
+                        <img src="https://i.imgur.com/RnMLOEq.jpeg" alt="Hall Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="md:w-1/2 w-full p-8 text-center md:text-left">
+                        <h3 class="text-4xl font-heading font-bold mb-4 text-primary">Խնջույք</h3>
+                        <p class="text-2xl font-englishbody font-semibold text-darktext mb-2"> Liana Garden Hall <br> <span class="text-primary">17:30</span>
+                        </p>
+                        <p class="text-lg mb-6 text-darktext font-body"> Հայաստան, Արմավիրի մարզ, Փարաքար գյուղ
+                        </p>
+                        <a href="https://www.google.com/maps/place/%D4%BC%D5%AB%D5%A1%D5%B6%D5%B6%D5%A1+%D4%B3%D5%A1%D6%80%D5%A4%D5%A5%D5%B6+%D5%80%D5%B8%D5%AC/@40.1639056,44.3904987,17.07z/data=!4m9!3m8!1s0x406abf20058b7395:0xc8881d319e6d89ca!5m2!4m1!1i2!8m2!3d40.1649513!4d44.3920288!16s%2Fg%2F11ktyzthbv?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.imgur.com/i42dnEc.png"
+                                alt="Map of Liana Garden Hall"
+                                class="w-full h-64 rounded-lg shadow-md border border-accent object-cover cursor-pointer">
+                        </a>
+                        <p class="text-sm text-darktext mt-4 italic font-englishbody">Click on the map to open in Google Maps</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t border-accent mx-auto max-w-5xl my-12"></div>
+
+        <section id="looking-forward" class="py-16 px-6 bg-mediumbg text-center relative z-10">
+            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-4xl md:text-5xl font-englishheading font-bold mb-4 text-primary">
+                    We are looking forward!
+                </h2>
+                <p class="text-xl md:text-2xl font-englishbody text-darktext leading-relaxed">
+                    We can't wait to celebrate our special day with all of you. <br>
+                    Your presence will make our wedding truly unforgettable.
+                </p>
+            </div>
+        </section>
+
+        <footer class="bg-primary text-white py-8 px-6 text-center relative z-10">
+            <div class="container mx-auto">
+                <p class="text-lg font-englishbody">© 2025 Mane & Robert. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
