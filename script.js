@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = [
         'https://i.imgur.com/WNXWuf6.jpeg',
         'https://i.imgur.com/mehFjlj.jpeg',
-        'https://placehold.co/1920x1080/F2D7D5/FFFFFF?text=Mane+and+Robert+3'
+        'https://i.imgur.com/vBrTHuw.jpeg'
     ];
     let currentImageIndex = 0;
 
