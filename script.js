@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Slideshow images (replace with your actual wedding photos)
     const images = [
         'https://i.imgur.com/WNXWuf6.jpeg',
-        'https://i.imgur.com/SHOLSpH.jpeg',
+        'https://i.imgur.com/mehFjlj.jpeg',
         'https://placehold.co/1920x1080/F2D7D5/FFFFFF?text=Mane+and+Robert+3'
     ];
     let currentImageIndex = 0;
