@@ -12,8 +12,6 @@
                     fontFamily: {
                         heading: ['"Vrdznagir"', 'cursive', 'serif'], // Headers use Vrdznagir (Armenian)
                         body: ['"Armenian Decorative"', 'cursive', 'sans-serif'], // Body text uses Armenian Decorative (Armenian)
-                        englishbody: ['"Dancing Script"', 'cursive', 'sans-serif'], // New: For English body text
-                        englishheading: ['"Playfair Display"', 'serif'], // New: Another option for English headings
                     },
                     colors: {
                         primary: '#A77977', // Muted Rose
@@ -34,7 +32,7 @@
         <div class="absolute inset-0 z-0 background-image-placeholder">
             </div>
 
-        <h1 class="text-6xl md:text-8xl font-heading font-bold mb-6 animate-fade-in-up mt-auto">Ռոբերտ եվ Մանե</h1>
+        <h1 class="text-6xl md:text-8xl font-heading font-bold mb-6 animate-fade-in-up mt-auto">Ռոբերտ և Մանե</h1>
         <p class="text-xl md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չեք կարողանում հավատալ ? Մենք էլ...</p>
         <button id="enter-button" class="bg-white text-primary px-12 py-5 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 font-semibold text-xl animate-fade-in-up delay-400 font-heading">
             Դիտել հրավերը
@@ -44,7 +42,7 @@
     <div class="main-content relative z-10">
         <header class="bg-white bg-opacity-90 shadow-lg py-4 px-6 fixed w-full z-40 top-0 backdrop-blur-sm">
             <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                <a href="#home" class="text-3xl font-heading font-bold text-primary mb-2 md:mb-0">Ռոբերտ եվ Մանե</a>
+                <a href="#home" class="text-3xl font-heading font-bold text-primary mb-2 md:mb-0">Ռոբերտ և Մանե</a>
                 <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-md font-heading">
                     <li><a href="#home" class="text-darktext hover:text-primary transition duration-300">Գլխավոր Էջ</a></li>
                     <li><a href="#important-dates" class="text-darktext hover:text-primary transition duration-300">Կարևոր Ամսաթվեր</a></li>
@@ -54,12 +52,15 @@
             </nav>
         </header>
 
-        <section id="home" class="relative h-screen text-white overflow-hidden pt-24 md:pt-0">
-            <img id="slideshow-img" src="https://i.imgur.com/WNXWuf6.jpeg" alt="Wedding Couple" class="slideshow-image absolute inset-0 w-full h-full object-cover filter brightness-75">
-            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xl text-center px-6 pb-6 z-10">
-                <p class="text-lg md:text-xl font-body font-light hero-overlay-text">
-Սիրով հրավիրում ենք ձեզ ներկա գտնվելու և մեզ հետ կիսելու մեր կյանքի կարևորագույն իրադարձությունը:
-                </p>
+        <section id="home" class="relative text-white overflow-hidden pt-24 md:pt-0">
+            <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9]">
+                <img id="slideshow-img" src="https://i.imgur.com/WNXWuf6.jpeg" alt="Wedding Couple" class="slideshow-image absolute inset-0 w-full h-full object-cover filter brightness-75">
+                
+                <div class="absolute bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xl text-center px-6 pb-6 z-10">
+                    <p class="text-[0.6rem] md:text-xl font-body font-light hero-overlay-text">
+                        Սիրով հրավիրում ենք ձեզ ներկա գտնվելու և մեզ հետ կիսելու մեր կյանքի կարևորագույն իրադարձությունը:
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -70,39 +71,37 @@
                 <div class="flex justify-center items-center space-x-4 mb-10 text-darktext flex-wrap sm:flex-nowrap">
                     <div class="text-center p-2">
                         <span id="days" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
-                        <p class="text-md font-body">Օրեր</p>
+                        <p class="text-sm font-body">Օրեր</p>
                     </div>
                     <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
                     <div class="text-center p-2">
                         <span id="hours" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
-                        <p class="text-md font-body">Ժամեր</p>
+                        <p class="text-sm font-body">Ժամեր</p>
                     </div>
                     <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
                     <div class="text-center p-2">
                         <span id="minutes" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
-                        <p class="text-md font-body">Րոպեներ</p>
+                        <p class="text-sm font-body">Րոպեներ</p>
                     </div>
                     <span class="text-5xl md:text-6xl font-heading text-primary hidden sm:block">:</span>
                     <div class="text-center p-2">
                         <span id="seconds" class="text-5xl md:text-6xl font-heading font-bold text-primary">00</span>
-                        <p class="text-md font-body">Վարկյաններ</p>
+                        <p class="text-sm font-body">Վարկյաններ</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-8 text-darktext">
                     <div>
                         <h3 class="text-2xl font-heading font-bold text-primary mb-2">Հարսանյաց Օր:</h3>
-                        <p class="text-xl font-body">Հոկտեմբերի 11, 2025</p>
+                        <p class="text-lg font-body">Հոկտեմբերի 11, 2025</p>
                     </div>
                 </div>
                 <p class="text-sm font-semibold text-primary mt-8 font-body">Ձեր ներկայությունը մեր ամենամեծ նվերն է!</p>
             </div>
         </section>
 
-        ---
-
         <section id="timeline" class="py-16 px-6 bg-lightbg relative z-10">
             <div class="container mx-auto max-w-5xl">
-                <h2 class="text-4xl md:text-5xl font-englishbody font-bold text-center mb-12 text-primary">The Celebration</h2>
+                <h2 class="text-4xl md:text-5xl font-body font-bold text-center mb-12 text-primary">Արարողություն</h2>
                 <div id="timeline-church" class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden mb-12 transform hover:scale-[1.01] transition duration-300">
                     <div class="md:w-1/2 w-full h-80 md:h-auto overflow-hidden">
                         <img src="https://i.imgur.com/KPWNK5V.jpeg" alt="Church Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
@@ -118,7 +117,7 @@
                                 alt="Map of Surb Gayane Church"
                                 class="w-full h-64 rounded-lg shadow-md border border-accent object-cover cursor-pointer">
                         </a>
-                        <p class="text-xs text-darktext mt-4 italic font-body">Սեղմեք քարտեզի վրա՝ Google Քարտեզում բացելու համար</p>
+                        <p class="text-xs text-darktext mt-4 italic font-body">Սեղմեք քարտեզի վրա՝ Google քարտեզում բացելու համար</p>
                     </div>
                 </div>
 
@@ -137,7 +136,7 @@
                                 alt="Map of Liana Garden Hall"
                                 class="w-full h-64 rounded-lg shadow-md border border-accent object-cover cursor-pointer">
                         </a>
-                        <p class="text-xs text-darktext mt-4 italic font-body">Սեղմեք քարտեզի վրա՝ Google Քարտեզում բացելու համար</p>
+                        <p class="text-xs text-darktext mt-4 italic font-body">Սեղմեք քարտեզի վրա՝ Google քարտեզում բացելու համար</p>
                     </div>
                 </div>
             </div>
@@ -147,12 +146,12 @@
 
         <section id="looking-forward" class="py-16 px-6 bg-mediumbg text-center relative z-10">
             <div class="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg">
-                <h2 class="text-4xl md:text-5xl font-englishheading font-bold mb-4 text-primary">
-                    We are looking forward!
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4 text-primary">
+                    Ուրախությամբ սպասում ենք ձեզ!
                 </h2>
-                <p class="text-xl md:text-2xl font-englishbody text-darktext leading-relaxed">
-                    We can't wait to celebrate our special day with all of you. <br>
-                    Your presence will make our wedding truly unforgettable.
+                <p class="text-xl md:text-2xl font-body text-darktext leading-relaxed">
+                    Ուզում ենք մեր հատուկ օրը կիսել ձեր հետ։ <br>
+                    Ձեր ներկայությունը մեր հարսանեկան օրը ավելի հիշարժան կդարձնի։
                 </p>
             </div>
         </section>
