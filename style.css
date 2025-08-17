@@ -1,103 +1,110 @@
-/* style.css */ 
+/* style.css */
 
-/* Google Fonts Import for English Text - MUST BE AT THE TOP */ 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap'); 
+/* Google Fonts Import for English Text - MUST BE AT THE TOP */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* --- Custom Font Declaration for Vrdznagir (for headers) --- */ 
-@font-face { 
-    font-family: 'Vrdznagir'; /* Name used in tailwind.config */ 
-    src: url('./fonts/Vrdznagir.otf') format('opentype'); /* Assuming Vrdznagir is .otf */ 
-    font-weight: normal; 
-    font-style: normal; 
-    font-display: swap; 
-} 
-
-/* --- Custom Font Declaration for Armenian Decorative (for body text) --- */ 
-@font-face { 
-    font-family: 'Armenian Decorative'; /* Name used in tailwind.config */ 
-    src: url('./fonts/ArmenianDecorative.ttf') format('truetype'); /* Assuming Armenian Decorative is .ttf */ 
-    font-weight: normal; 
-    font-style: normal; 
-    font-display: swap; 
-} 
-
-/* --- Custom CSS for Wedding Invitation --- */ 
-
-/* Entry Overlay Styles */ 
-#entry-overlay { 
-    transition: opacity 1s ease-out, visibility 1s ease-out; 
-} 
-
-#entry-overlay.hidden { 
-    opacity: 0; 
-    visibility: hidden; 
-} 
-
-/* Main Content Styles */ 
-.main-content { 
-    opacity: 0; 
-    transition: opacity 1s ease-in; 
-} 
-
-.main-content.visible { 
-    opacity: 1; 
-} 
-
-/* Keyframe for fade-in-up animation */ 
-@keyframes fadeInUp { 
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    } 
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    } 
-} 
-
-.animate-fade-in-up { 
-    animation: fadeInUp 0.8s ease-out forwards; 
-} 
-
-.delay-200 { animation-delay: 0.2s; } 
-.delay-400 { animation-delay: 0.4s; } 
-
-/* Slideshow Image Transition */
-.slideshow-image { 
-    transition: opacity 1s ease-in-out; 
-    object-fit: cover;    
+/* --- Custom Font Declaration for Vrdznagir (for headers) --- */
+@font-face {
+    font-family: 'Vrdznagir'; /* Name used in tailwind.config */
+    src: url('./fonts/Vrdznagir.otf') format('opentype'); /* Assuming Vrdznagir is .otf */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* Responsive Map for iframes */ 
-.responsive-map { 
-    width: 100%; 
-    height: 300px; /* Default height */ 
-    border: 0; 
-} 
+/* --- Custom Font Declaration for Armenian Decorative (for body text) --- */
+@font-face {
+    font-family: 'Armenian Decorative'; /* Name used in tailwind.config */
+    src: url('./fonts/ArmenianDecorative.ttf') format('truetype'); /* Assuming Armenian Decorative is .ttf */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Adjust map height for smaller screens if needed, though Tailwind handles most responsiveness */ 
-@media (max-width: 768px) { 
-    .responsive-map { 
-        height: 250px; 
-    } 
-} 
+/* --- Custom CSS for Wedding Invitation --- */
 
-/* Hero Overlay Text Shadow for better readability */ 
-.hero-overlay-text { 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-} 
+/* Entry Overlay Styles */
+#entry-overlay {
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
 
-/* Background picture for the entry overlay */ 
-.background-image-placeholder { 
-    background-image: url('https://i.imgur.com/ffOPbcG.jpeg'); /* <<< REMEMBER TO REPLACE THIS with your image URL */ 
-    background-size: cover;       /* Ensures the image covers the entire area */ 
-    background-position: center;  /* Centers the image */ 
-    background-repeat: no-repeat; /* Prevents the image from repeating */ 
-    position: absolute;           /* Makes sure it fills the parent div */ 
-    inset: 0;                     /* Top, right, bottom, left to 0, same as absolute w-full h-full */ 
-    z-index: -1;                  /* Puts it behind the text and button */ 
+#entry-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 
-    /* Optional: Add a subtle overlay to make text more readable */ 
-    /* background-color: rgba(0, 0, 0, 0.4); */ /* Darkens the image slightly */ 
-    /* background-blend-mode: multiply; */ /* Blends the color with the image */ 
+/* Main Content Styles */
+.main-content {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.main-content.visible {
+    opacity: 1;
+}
+
+/* Keyframe for fade-in-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Slideshow Image Transition */
+.slideshow-image {
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+}
+
+/* Responsive Map for iframes */
+.responsive-map {
+    width: 100%;
+    height: 300px; /* Default height */
+    border: 0;
+}
+
+/* Adjust map height for smaller screens if needed, though Tailwind handles most responsiveness */
+@media (max-width: 768px) {
+    .responsive-map {
+        height: 250px;
+    }
+}
+
+/* Hero Overlay Text Shadow for better readability */
+.hero-overlay-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* New CSS for the responsive background images */
+.background-image-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+/* You can remove your old .background-image-placeholder rules */
+.background-image-placeholder {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .background-image-placeholder {
+        display: none;
+    }
 }

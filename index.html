@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mane & Robert - Our Wedding Celebration</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,11 +28,13 @@
     </head>
 <body class="font-body text-darktext bg-lightbg overflow-x-hidden relative">
     <div id="entry-overlay" class="fixed inset-0 bg-primary flex flex-col items-center justify-center text-white z-50 p-6 text-center">
-        <div class="absolute inset-0 z-0 background-image-placeholder">
-            </div>
+        <div class="absolute inset-0 z-0">
+            <img src="https://i.imgur.com/7zMPHhG.jpeg" alt="Wedding Couple - Desktop" class="background-image-responsive hidden md:block">
+            <img src="https://i.imgur.com/018RZSk.jpeg" alt="Wedding Couple - Mobile" class="background-image-responsive block md:hidden">
+        </div>
 
-        <h1 class="text-6xl md:text-8xl font-heading font-bold mb-6 animate-fade-in-up mt-auto">Ռոբերտ և Մանե</h1>
-        <p class="text-xl md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չեք կարողանում հավատալ ? Մենք էլ...</p>
+        <h1 class="text-4xl md:text-8xl font-heading font-bold mb-6 animate-fade-in-up mt-auto">Ռոբերտ և Մանե</h1>
+        <p class="text-lg md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չեք կարողանում հավատալ ? Մենք էլ...</p>
         <button id="enter-button" class="bg-white text-primary px-12 py-5 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 font-semibold text-xl animate-fade-in-up delay-400 font-heading">
             Դիտել հրավերը
         </button>

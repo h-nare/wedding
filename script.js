@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Slideshow images (replace with your actual wedding photos)
     const images = [
-        'https://i.imgur.com/WNXWuf6.jpeg',
-        'https://i.imgur.com/mehFjlj.jpeg',
-        'https://i.imgur.com/vBrTHuw.jpeg'
+        'https://i.imgur.com/4RpAji7.jpeg',
+        'https://i.imgur.com/GFGlPoD.jpeg',
+        'https://i.imgur.com/vv8SnaN.jpeg'
     ];
     let currentImageIndex = 0;
 
