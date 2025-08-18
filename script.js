@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
         entryOverlay.classList.add('hidden'); // Hide overlay
         mainContent.classList.add('visible'); // Show main content
 
+        // Scroll the page to the top
+        window.scrollTo(0,0);
+
         // Start slideshow only after entering
         startSlideshow();
     });
