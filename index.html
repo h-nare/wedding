@@ -17,15 +17,15 @@
                         secondary: '#D4C1EC', // Soft Lavender
                         accent: '#F2D7D5', // Light Peach
                         darktext: '#3A3B3C', // Dark Grey for text
-                        lightbg: '#FBFBFB', // Off-white background
-                        mediumbg: '#F5F5F5', // Slightly darker off-white
+                        lightbg: '#F5F5F5', // Redefined as a true, neutral grey
+                        mediumbg: '#FFFFFF', // Redefined as pure white for sections
                     }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 <body class="font-body text-darktext bg-lightbg overflow-x-hidden relative">
     <div id="entry-overlay" class="fixed inset-0 bg-primary flex flex-col items-center justify-center text-white z-50 p-6 text-center">
         <div class="absolute inset-0 z-0">
@@ -34,7 +34,7 @@
         </div>
 
         <h1 class="text-4xl md:text-8xl font-heading font-bold mb-6 animate-fade-in-up mt-auto">Ռոբերտ և Մանե</h1>
-        <p class="text-lg md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չեք կարողանում հավատալ ? Մենք էլ...</p>
+        <p class="text-lg md:text-2xl font-body font-light mb-8 animate-fade-in-up delay-200">Չե՞ք կարողանում հավատալ ... Մենք էլ...</p>
         <button id="enter-button" class="bg-white text-primary px-12 py-5 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 font-semibold text-xl animate-fade-in-up delay-400 font-heading">
             Դիտել հրավերը
         </button>
@@ -45,10 +45,10 @@
             <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <a href="#home" class="text-3xl font-heading font-bold text-primary mb-2 md:mb-0">Ռոբերտ և Մանե</a>
                 <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-md font-heading">
-                    <li><a href="#home" class="text-darktext hover:text-primary transition duration-300">Գլխավոր Էջ</a></li>
-                    <li><a href="#important-dates" class="text-darktext hover:text-primary transition duration-300">Կարևոր Ամսաթվեր</a></li>
+                    <li><a href="#home" class="text-darktext hover:text-primary transition duration-300">Գլխավոր էջ</a></li>
+                    <li><a href="#important-dates" class="text-darktext hover:text-primary transition duration-300">Կարևոր ամսաթվեր</a></li>
                     <li><a href="#timeline-church" class="text-darktext hover:text-primary transition duration-300">Արարողություն</a></li>
-                    <li><a href="#timeline-hall" class="text-darktext hover:text-primary transition duration-300">Խնջույք</a></li>
+                    <li><a href="#timeline-hall" class="text-darktext hover:text-primary transition duration-300">Հանդիսություն</a></li>
                 </ul>
             </nav>
         </header>
@@ -57,15 +57,15 @@
             <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9]">
                 <img id="slideshow-img" src="https://i.imgur.com/4RpAji7.jpeg" alt="Wedding Couple" class="slideshow-image absolute inset-0 w-full h-full object-cover filter brightness-75">
                 
-                <div class="absolute bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xl text-center px-6 pb-6 z-10">
-                    <p class="text-[0.6rem] md:text-xl font-body font-light hero-overlay-text">
+                <div class="absolute bottom-2 md:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xl text-center px-8 pb-6 z-10">
+                    <p class="text-[0.7rem] md:text-xl font-body font-light hero-overlay-text">
                         Սիրով հրավիրում ենք ձեզ ներկա գտնվելու և մեզ հետ կիսելու մեր կյանքի կարևորագույն իրադարձությունը:
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="important-dates" class="py-16 px-6 bg-mediumbg relative z-10">
+        <section id="important-dates" class="py-16 px-6 bg-lightbg relative z-10">
             <div class="container mx-auto text-center max-w-4xl bg-white p-8 rounded-lg shadow-lg">
                 <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8 text-primary">Հարսանիքին մնացել է</h2>
 
@@ -92,18 +92,18 @@
                 </div>
                 <div class="grid grid-cols-1 gap-8 text-darktext">
                     <div>
-                        <h3 class="text-2xl font-heading font-bold text-primary mb-2">Հարսանյաց Օր:</h3>
-                        <p class="text-lg font-body">Հոկտեմբերի 11, 2025</p>
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-2">Հարսանյաց օր</h3>
+                        <p class="text-lg font-body">Հոկտեմբերի 11, 2025 թ.</p>
                     </div>
                 </div>
-                <p class="text-sm font-semibold text-primary mt-8 font-body">Ձեր ներկայությունը մեր ամենամեծ նվերն է!</p>
+                <p class="text-sm font-semibold text-primary mt-8 font-body">Ձեր ներկայությունը մեր ամենամեծ նվերն է </p>
             </div>
         </section>
 
         <section id="timeline" class="py-16 px-6 bg-lightbg relative z-10">
             <div class="container mx-auto max-w-5xl">
                 <h2 class="text-4xl md:text-5xl font-body font-bold text-center mb-12 text-primary">Արարողություն</h2>
-                <div id="timeline-church" class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden mb-12 transform hover:scale-[1.01] transition duration-300">
+                <div id="timeline-church" class="flex flex-col md:flex-row items-center bg-mediumbg rounded-xl shadow-xl overflow-hidden mb-12 transform hover:scale-[1.01] transition duration-300">
                     <div class="md:w-1/2 w-full h-80 md:h-auto overflow-hidden">
                         <img src="https://i.imgur.com/KPWNK5V.jpeg" alt="Church Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
@@ -111,7 +111,7 @@
                         <h3 class="text-4xl font-heading font-bold mb-4 text-primary">Պսակադրություն</h3>
                         <p class="text-2xl font-body font-semibold text-darktext mb-2"> Սուրբ Գայանե եկեղեցի <br> <span class="text-primary">14:00</span>
                         </p>
-                        <p class="text-lg mb-6 text-darktext font-body"> Հասցե՝ Արմավիրի մարզ, ք.Էջմիածին
+                        <p class="text-lg mb-6 text-darktext font-body"> Հասցե՝ Արմավիրի մարզ, ք. Էջմիածին
                         </p>
                         <a href="https://www.google.com/maps/place/%D5%8D%D5%B8%D6%82%D6%80%D5%A2+%D4%B3%D5%A1%D5%B5%D5%A1%D5%B6%D5%A5+%D5%A5%D5%AF%D5%A5%D5%B2%D5%A5%D6%81%D5%AB/@40.1578935,44.2862611,16.15z/data=!4m6!3m5!1s0x406a952aa68c6009:0x8a692ec2c8be215a!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                             <img src="https://i.imgur.com/yGRNs9h.png"
@@ -122,15 +122,15 @@
                     </div>
                 </div>
 
-                <div id="timeline-hall" class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition duration-300">
+                <div id="timeline-hall" class="flex flex-col md:flex-row-reverse items-center bg-mediumbg rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.01] transition duration-300">
                     <div class="md:w-1/2 w-full h-80 md:h-auto overflow-hidden">
                         <img src="https://i.imgur.com/RnMLOEq.jpeg" alt="Hall Image" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                     <div class="md:w-1/2 w-full p-8 text-center md:text-left">
-                        <h3 class="text-4xl font-heading font-bold mb-4 text-primary">Խնջույք</h3>
-                        <p class="text-2xl font-englishbody font-semibold text-darktext mb-2"> Liana Garden Hall <br> <span class="text-primary">17:00</span>
+                        <h3 class="text-4xl font-heading font-bold mb-4 text-primary">Հանդիսություն</h3>
+                        <p class="text-2xl font-englishbody font-semibold text-darktext mb-2"> Լիաննա Գարդեն Հոլ <br> <span class="text-primary">17:00</span>
                         </p>
-                        <p class="text-lg mb-6 text-darktext font-body"> Հայաստան, Արմավիրի մարզ, Փարաքար գյուղ
+                        <p class="text-lg mb-6 text-darktext font-body"> Հայաստան, Արմավիրի մարզ, Փարաքար 
                         </p>
                         <a href="https://www.google.com/maps/place/%D4%BC%D5%AB%D5%A1%D5%B6%D5%B6%D5%A1+%D4%B3%D5%A1%D6%80%D5%A4%D5%A5%D5%B6+%D5%80%D5%B8%D5%AC/@40.1639056,44.3904987,17.07z/data=!4m9!3m8!1s0x406abf20058b7395:0xc8881d319e6d89ca!5m2!4m1!1i2!8m2!3d40.1649513!4d44.3920288!16s%2Fg%2F11ktyzthbv?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                             <img src="https://i.imgur.com/i42dnEc.png"
@@ -145,21 +145,21 @@
 
         <div class="border-t border-accent mx-auto max-w-5xl my-12"></div>
 
-        <section id="looking-forward" class="py-16 px-6 bg-mediumbg text-center relative z-10">
-            <div class="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg">
+        <section id="looking-forward" class="py-16 px-6 bg-lightbg text-center relative z-10">
+            <div class="container mx-auto max-w-4xl bg-mediumbg p-8 rounded-lg shadow-lg">
                 <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4 text-primary">
-                    Ուրախությամբ սպասում ենք ձեզ!
+                    Ուրախությամբ սպասում ենք ձեզ ❤︎
                 </h2>
                 <p class="text-xl md:text-2xl font-body text-darktext leading-relaxed">
-                    Ուզում ենք մեր հատուկ օրը կիսել ձեր հետ։ <br>
-                    Ձեր ներկայությունը մեր հարսանեկան օրը ավելի հիշարժան կդարձնի։
+                    Ուզում ենք մեր հատուկ օրը կիսել ձեզ հետ։ <br>
+                    Ձեր ներկայությունը մեր հարսանեկան օրը կդարձնի ավելի հիշարժան։
                 </p>
             </div>
         </section>
 
         <footer class="bg-primary text-white py-8 px-6 text-center relative z-10">
             <div class="container mx-auto">
-                <p class="text-lg font-englishbody">© 2025 Mane & Robert. All rights reserved.</p>
+                <p class="text-lg font-englishbody">© 2025 All rights reserved to the bridesmaid of the year Nare Hakobyan.</p>
             </div>
         </footer>
     </div>
